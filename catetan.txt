@@ -1,0 +1,29 @@
+Catatan untuk mengeksekusi SQL di project simple-bank
+
+1. Jalankan PostgreSQL dengan Docker
+   make postgres
+
+2. Buat database simple_bank
+   make createdb
+
+3. Terapkan migrasi SQL ke database
+   make migrateup
+
+4. Jika perlu membatalkan satu langkah migrasi terakhir
+   make migratedown
+
+5. Jika perlu membatalkan semua migrasi
+   make migratedownall
+
+6. Generate kode SQL dari query dengan sqlc
+   make sqlc
+
+6. Jalankan test untuk memastikan semuanya bekerja
+   make test
+
+Keterangan:
+- File migrasi SQL ada di `db/migration/`
+- Query SQL berada di `db/query/`
+- Konfigurasi sqlc ada di `sqlc.yaml`
+- Database PostgreSQL dapat diakses di `localhost:5433`
+- Username: `root`, password: `secret`
