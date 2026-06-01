@@ -18,8 +18,12 @@ Catatan untuk mengeksekusi SQL di project simple-bank
 6. Generate kode SQL dari query dengan sqlc
    make sqlc
 
-6. Jalankan test untuk memastikan semuanya bekerja
+7. Jalankan test untuk memastikan semuanya bekerja
    make test
+
+8. Menggunakan golang-migrate
+   dokumentasinya ada di sini https://github.com/golang-migrate/migrate
+   migrate create -ext sql -dir (db/migration / path) -seq (init_schema / nama file)
 
 Keterangan:
 - File migrasi SQL ada di `db/migration/`
